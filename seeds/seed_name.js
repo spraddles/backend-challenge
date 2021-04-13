@@ -5,11 +5,11 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex("fields").insert([
-        { id: 1, name: "firstName" },
-        { id: 2, name: "lastName" },
-        { id: 3, name: "dob" },
-        { id: 4, name: "email" },
-        { id: 5, name: "emergencyContact" },
+        { name: "firstName", type: "text", required: "1" },
+        { name: "lastName", type: "text", required: "1"},
+        { name: "dob", type: "date", required: "1" },
+        { name: "email", type: "email", required: "0" },
+        { name: "emergencyContact", type: "text", required: "1" }
       ]);
     });
 };
