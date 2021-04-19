@@ -6,11 +6,16 @@
   "scripts": {
     "start": "node src/index",
     "db:init": "knex migrate:latest && yarn db:seed",
+    "db:migrate-no-seed": "knex migrate:latest",
+    "db:rollback": "knex migrate:rollback",
+    "db:rollback-no-seed": "knex migrate:rollback && knex migrate:latest",
     "db:reset": "knex migrate:rollback && knex migrate:latest && yarn db:seed",
     "db:seed": "knex seed:run"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "~4.16.3",
+    "express-validator": "^6.10.0",
     "knex": "^0.95.4",
     "sqlite3": "^5.0.2"
   }

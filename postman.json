@@ -1,117 +1,248 @@
 {
 	"info": {
-		"_postman_id": "e0e114e3-e736-4649-9049-aac96cabb379",
-		"name": "Backend challenge",
-		"schema":
-			"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	  "_postman_id": "fe6eed3b-214d-4fa3-8ede-bd250285020e",
+	  "name": "Backend challenge",
+	  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "Ping",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:3000/ping",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "3000",
-					"path": ["ping"]
-				}
-			},
-			"response": []
+	  {
+		"name": "Ping",
+		"id": "e9e3fe0d-e8a3-41ee-93a5-10276db65489",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
 		},
-		{
-			"name": "Get fields",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:3000/fields",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "3000",
-					"path": ["fields"]
-				}
-			},
-			"response": []
+		"request": {
+		  "method": "GET",
+		  "header": [],
+		  "url": {
+			"raw": "http://localhost:3000/ping",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "ping"
+			]
+		  }
 		},
-		{
-			"name": "New field",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw":
-						"{\n    \"type\": \"text\",\n    \"name\": \"firstName\",\n    \"required\": true\n}"
-				},
-				"url": {
-					"raw": "http://localhost:3000/fields",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "3000",
-					"path": ["fields"]
-				}
-			},
-			"response": []
+		"response": []
+	  },
+	  {
+		"name": "Get fields",
+		"id": "bdc2c10e-0e5a-4830-be1f-529813d65089",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
 		},
-		{
-			"name": "Update field",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw":
-						"{\n    \"type\": \"text\",\n    \"name\": \"firstName\",\n    \"required\": true\n}"
-				},
-				"url": {
-					"raw": "http://localhost:3000/fields/1",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "3000",
-					"path": ["fields", "1"]
-				}
-			},
-			"response": []
+		"request": {
+		  "method": "GET",
+		  "header": [],
+		  "url": {
+			"raw": "http://localhost:3000/fields",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "fields"
+			]
+		  }
 		},
-		{
-			"name": "Post form",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw":
-						"{\n  \"firstName\": \"Torben\",\n  \"lastName\": \"Sko\",\n  \"dob\": \"1985-04-02\",\n  \"email\": \"torben.sko@nextpracticehealth.com\",\n  \"emergencyContact\": {\n    \"firstName\": \"Jye\",\n    \"lastName\": \"Lewis\",\n    \"email\": \"jye.lewis@nextpracticehealth.com\"\n  }\n}"
-				},
-				"url": {
-					"raw": "http://localhost:3000/forms",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "3000",
-					"path": ["forms"]
-				}
-			},
-			"response": []
-		}
+		"response": []
+	  },
+	  {
+		"name": "Get forms",
+		"id": "a5bd74cc-f966-4756-b798-8913e8d3e112",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
+		},
+		"request": {
+		  "method": "GET",
+		  "header": [],
+		  "url": {
+			"raw": "http://localhost:3000/forms",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "forms"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "New field",
+		"id": "efd024e1-3133-49fd-936e-10639dcd7f1d",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
+		},
+		"request": {
+		  "method": "POST",
+		  "header": [
+			{
+			  "key": "Content-Type",
+			  "value": "application/json"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n    \"type\": \"text\",\n    \"name\": \"newField444\",\n    \"required\": 1\n}",
+			"options": {
+			  "raw": {
+				"language": "json"
+			  }
+			}
+		  },
+		  "url": {
+			"raw": "http://localhost:3000/fields/new",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "fields",
+			  "new"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Update field",
+		"id": "f1876050-126c-4f57-ad06-e9d6fd928970",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
+		},
+		"request": {
+		  "method": "PUT",
+		  "header": [
+			{
+			  "key": "Content-Type",
+			  "value": "application/json"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n    \"id\": \"7\",\n    \"type\": \"text\",\n    \"name\": \"ThisNewEmail444name\",\n    \"required\": false\n}"
+		  },
+		  "url": {
+			"raw": "http://localhost:3000/fields/update",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "fields",
+			  "update"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Update form",
+		"id": "09d23a1a-0a3a-492a-8e33-8091284a3e0f",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
+		},
+		"request": {
+		  "method": "PUT",
+		  "header": [
+			{
+			  "key": "Content-Type",
+			  "value": "application/json"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n    \"id\": \"2\",\n    \"firstName\": \"Brett\",\n    \"lastName\": \"Spradbury\",\n    \"dob\": \"1983-05-06\",\n    \"email\": \"brett.spradbury@gmail.com\"\n}"
+		  },
+		  "url": {
+			"raw": "http://localhost:3000/forms/update",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "forms",
+			  "update"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Post form",
+		"id": "9ec4dcd0-f690-450e-a960-a659acca0fb7",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
+		},
+		"request": {
+		  "method": "POST",
+		  "header": [
+			{
+			  "key": "Content-Type",
+			  "value": "application/json"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n  \"firstName\": \"Brett\",\n  \"lastName\": \"Spradbury\",\n  \"dob\": \"1983-05-06\",\n  \"email\": \"brett.spradbury@gmail.com\"\n}"
+		  },
+		  "url": {
+			"raw": "http://localhost:3000/forms/new",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "forms",
+			  "new"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Delete field",
+		"id": "7285d903-01f7-4953-bc9b-c307b4fdcfe4",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
+		},
+		"request": {
+		  "method": "DELETE",
+		  "header": [],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n    \"id\": \"7\"\n}",
+			"options": {
+			  "raw": {
+				"language": "json"
+			  }
+			}
+		  },
+		  "url": {
+			"raw": "http://localhost:3000/fields/delete",
+			"protocol": "http",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "fields",
+			  "delete"
+			]
+		  }
+		},
+		"response": []
+	  }
 	]
-}
+  }
